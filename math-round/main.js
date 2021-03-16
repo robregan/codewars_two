@@ -17,3 +17,4 @@ Math.roundTo = function (number, precision) {
 
   // or
 Math.roundTo = (n,p) => Number(n.toFixed(p))
+  
