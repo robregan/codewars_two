@@ -12,6 +12,19 @@ function divisors(integer) {
   return res.length ? res : integer + ' is prime'
 };
 
+//anudda one
+function divisors(integer) {
+     let divs = [];
+    
+    for(let i = 2; i < integer; i++) {
+      if(integer % i === 0) {
+        divs.push(i);
+      }
+    }
+    
+    return divs.length ? divs : integer + ' is prime';
+  };
+
 // I love solving these problems with as few lines of code as possible, but sometimes it is good to think about performance.
 
 // Using i <= integer / 2 as the loop condition instead of i * i <= integer changes the solution from O(sqrt n) to O(n). In other words, for large numbers, this solution will be significantly slower than it needs to be.
