@@ -44,9 +44,10 @@ const reverse = function(x){
     let revNum = 0, lastDigit = 0;
     while (x!==0) {
         lastDigit = x % 10; //The remainder of a number divided by 10 will give us the last digit. For example: 123/10 = 12.3 -> the remainder is 3, which is the last digit.
-        x = parseInt(x/10); 
-        revNum = revNum * 10 + lastDigit;
+        x = parseInt(x/10); //remove that digit from the end of x by using parseInt() method. For example: parseInt(12.3) = 12
+        revNum = revNum * 10 + lastDigit; // building up the reverse number
         if (revNum < Math.pow(-2, 31) || revNum > Math.pow(2, 31) - 1) return 0
-    }
+    } // the if statement will check for constraints given to us from leetcode
     return revNum
 }
+
