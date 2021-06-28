@@ -28,4 +28,5 @@ function songDecoder(song){
 function songDecoder(song){
     return song.replace(/(WUB)+/g," ").trim()
   }
-
+// The parantheses in this example are there to let the + work for a string of more than one character.
+// Since the plus matches one or more occurences of something, it would match "WUB", "WUBWUB", "WUBWUBWUB", etc, and then replace that whole part with one space. So there will be no multiple spaces after one another.
