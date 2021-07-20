@@ -1,0 +1,15 @@
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+// You can assume all values in the array are numbers.
+
+
+const smallEnough = (a, limit) => !a.some((e) => e > limit)
+
+// or with for loop
+
+function smallEnough(a, limit){
+    for(let i of a){
+      if(i > limit)
+        return false;
+    }
+    return true;
+  }
