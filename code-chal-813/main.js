@@ -14,3 +14,11 @@ function reverseArr(arr){
         arr[arr.length - 1 - i] = temp
     }return arr
 }
+// split
+function strCount(str, letter){  
+    return str.split(letter).length-1
+  }
+// filter
+function strCount(str, letter){  
+    return str.split('').filter(c => c == letter).length;
+  }
