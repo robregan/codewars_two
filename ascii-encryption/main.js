@@ -28,3 +28,7 @@ function asciiEncrypt(plaintext) {
                     .map((letter, index) => String.fromCharCode(letter.charCodeAt(0) - index))
                     .join('') 
   };
+
+// with regex
+const asciiEncrypt = p => p.replace(/./g,(e,i)=>String.fromCharCode(e.charCodeAt()+i))
+const asciiDecrypt = p => p.replace(/./g,(e,i)=>String.fromCharCode(e.charCodeAt()-i))
