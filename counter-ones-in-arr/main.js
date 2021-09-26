@@ -26,4 +26,7 @@ function onesCounter(input) {
        map.push(counter)
     return map.filter(el=>el!==0)
   }
- 
+ // regex stylee
+ function onesCounter(input) {
+    return (input.join``.match(/1+/g) || []).map(x => x.length)
+  }
