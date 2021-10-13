@@ -13,3 +13,11 @@ array.map(items => newArr.push(...items))
 return newArr.sort((a, b) => a - b)
 }
 
+// with reduce instead of map 
+function flattenAndSort(array) {
+    return array
+      .reduce((result, current) => [...result, ...current],[])
+      .sort((a, b) => a - b)
+      ;
+  }
+
