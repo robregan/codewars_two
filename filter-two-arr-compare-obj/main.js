@@ -38,3 +38,10 @@ function arrayDiff(a, b) {
   // return array where items not in the dictionary
   return a.filter(item => compareObject[item.toString()] != 0)
 }
+
+// using Set's has property to make it more efficient. .has() is done in constant time
+
+function arrayDiff(a,b){ 
+    let newSet = new Set(b)
+    return a.filter(n => !newSet.has(n))
+}
